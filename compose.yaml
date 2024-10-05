@@ -1,0 +1,38 @@
+volumes:
+  postgres-data:
+
+networks:
+  default:
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres
+    env_file:
+      - .env
+    healthcheck:
+      test: "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB"
+      interval: 2s
+      timeout: 5s
+      retries: 10
+    ports:
+      - 6666:5432                                   # port exposed for dbeaver
+    networks:
+      - default
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  app:
+    build: ./app
+    container_name: django_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    networks:
+      - default
+    stdin_open: true
+    tty: true
