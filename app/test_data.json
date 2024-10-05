@@ -1,0 +1,61 @@
+{
+    "users": [
+        ["test_user", "strong_password1"],
+        ["test_user2", "strong_password2"],
+        ["test_user3", "strong_password3"],
+        ["test_user4", "strong_password4"],
+        ["test_user5", "strong_password5"]
+    ],
+    "cats": [
+        {
+            "color": "черная",
+            "age": 2,
+            "description": "Удивительный маленький хищник"
+        },
+        {
+            "color": "белая",
+            "age": 1,
+            "description": "Красивая и дружелюбная"
+        },
+        {
+            "color": "серая",
+            "age": 3,
+            "description": "Любит грызть мышей"
+        },
+        {
+            "color": "коричневая",
+            "age": 5,
+            "description": "Самая большая кошка в мире"
+        },
+        {
+            "color": "белая",
+            "age": 4,
+            "description": "Любит кушать"
+        },
+        {
+            "color": "черная",
+            "age": 1,
+            "description": ""
+        },
+        {
+            "color": "коричневая",
+            "age": 2,
+            "description": "Немного опасна"
+        },
+        {
+            "color": "серая",
+            "age": 6,
+            "description": "Любит взаимодействие с другими животными"
+        },
+        {
+            "color": "белая",
+            "age": 5,
+            "description": "Взрослая, очень мягкая"
+        },
+        {
+            "color": "черная",
+            "age": 3,
+            "description": "Самая маленькая кошка в мире"
+        }
+    ]
+}
